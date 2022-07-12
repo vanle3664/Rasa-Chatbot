@@ -1,0 +1,61 @@
+version: "2.0"
+
+intents:
+  - chao_tuvan
+  - hoi_quanao
+  - hoi_gia
+  - hoi_mausac
+  - hoi_size
+  - hoi_diachi
+  - hoi_giaohang
+  - hoi_payment
+  - cac_loai_order
+  - khach_order
+  - thongtin_khach
+  - detail_order
+  - camon
+
+responses:
+  utter_chao_tuvan:
+    - text: "Xin chào anh/chị. Cảm ơn anh chị đã quan tâm, anh chị muốn biết thông tin gì ạ?"
+
+  utter_hoi_quanao:
+    - text: "Shop chuyên bán các loại áo phông nam nữ ạ"
+
+  utter_hoi_gia:
+    - text:
+        "Quần áo tại shop cam kết rẻ nhất trên thị trường, có nhiều đợt sale diễn ra liên tục
+        trong năm. Để biết thêm chi tiết anh chị truy cập website nhé"
+
+  utter_hoi_mausac:
+    - text:
+        "Có rất nhiều màu sắc cho anh chị lựa chọn ạ. Anh chị truy cập website
+        để xem kĩ hơn nhé"
+
+  utter_hoi_size:
+    - text: "Tất cả các mẫu áo đều có đủ size từ to đến nhỏ, từ S đến XXL ạ"
+
+  utter_hoi_diachi:
+    - text: "Shop ở số 1, Đại Cồ Việt, Hai Bà Trưng, Hà Nội"
+
+  utter_hoi_giaohang:
+    - text: "Shop nhận giao hàng toàn quốc ạ"
+
+  utter_hoi_payment:
+    - text: "Anh/chị có thể thanh toán trực tiếp online trên website hoặc thanh toán khi nhận hàng"
+
+  utter_cac_loai_order:
+    - text: "Anh/chị có thể đặt hàng trên website hoặc qua các kênh facebook, zalo của shop"
+
+  utter_khach_order:
+    - text: "Dạ! Anh/chị vui lòng cho em xin số điện thoại để bên em chốt đơn cho mình nhé!"
+
+  utter_detail_order:
+    - text: "Shop đã nhận được thông tin của anh/chị. Shop sẽ liên lạc lại với anh/chị để xác nhận đơn hàng nhé"
+
+  utter_camon:
+    - text: "Cảm ơn anh/chị đã quan tâm mua hàng tại shop"
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

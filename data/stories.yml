@@ -1,0 +1,77 @@
+version: "2.0"
+
+stories:
+  - story: mua quan ao
+    steps:
+      - intent: chao_tuvan
+      - action: utter_chao_tuvan
+      - intent: hoi_quanao
+      - action: utter_hoi_quanao
+      - intent: hoi_gia
+      - action: utter_hoi_gia
+      - intent: hoi_mausac
+      - action: utter_hoi_mausac
+      - intent: hoi_size
+      - action: utter_hoi_size
+
+  - story: chao_tuvan
+    steps:
+      - intent: chao_tuvan
+      - action: utter_chao_tuvan
+
+  - story: hoi_quanao
+    steps:
+      - intent: hoi_quanao
+      - action: utter_hoi_quanao
+
+  - story: hoi_gia
+    steps:
+      - intent: hoi_gia
+      - action: utter_hoi_gia
+
+  - story: hoi_mausac
+    steps:
+      - intent: hoi_mausac
+      - action: utter_hoi_mausac
+
+  - story: hoi_size
+    steps:
+      - intent: hoi_size
+      - action: utter_hoi_size
+
+  - story: hoi_diachi
+    steps:
+      - intent: hoi_diachi
+      - action: utter_hoi_diachi
+
+  - story: hoi_giaohang
+    steps:
+      - intent: hoi_giaohang
+      - action: utter_hoi_giaohang
+
+  - story: hoi_payment
+    steps:
+      - intent: hoi_payment
+      - action: utter_hoi_payment
+
+  - story: cac_loai_order
+    steps:
+      - intent: cac_loai_order
+      - action: utter_cac_loai_order
+
+  - story: mua_hang
+    steps:
+      - intent: khach_order
+      - action: utter_khach_order
+      - intent: detail_order
+      - action: utter_detail_order
+
+  - story: mua_hang_2
+    steps:
+      - intent: thongtin_khach
+      - action: utter_detail_order
+
+  - story: camon
+    steps:
+      - intent: camon
+      - action: utter_camon

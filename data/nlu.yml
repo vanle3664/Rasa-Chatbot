@@ -1,0 +1,97 @@
+version: "2.0"
+
+nlu:
+  - intent: chao_tuvan
+    examples: |
+      - chào shop, mình muốn mua quần áo, shop tư vấn giúp mình được không
+      - mình muốn tìm hiểu vài mẫu quần áo, áo phông cho mùa hè năm nay
+      - chào
+      - xin chào
+      - tư vấn cho mình vài mẫu đang hot
+      - chào shop
+
+  - intent: hoi_quanao
+    examples: |
+      - shop bán những loại quần áo nào nhỉ
+      - cửa hàng có những mẫu quần áo nào
+      - các sản phẩm hiện có
+
+  - intent: hoi_gia
+    examples: |
+      - giá thế nào
+      - giá bao nhiêu
+      - món này bao nhiêu
+      - được giảm giá không
+      - được sale không
+      - sale
+      - sale bao nhiêu
+      - món nào đang sale
+      - dưới 500k
+      - dưới 200k
+
+  - intent: hoi_mausac
+    examples: |
+      - màu
+      - màu sắc
+      - có những màu nào
+      - còn màu đỏ/đen/trắng/xanh/vàng không
+
+  - intent: hoi_size
+    examples: |
+      - size
+      - có những size nào
+      - vừa, rộng, chật, ngắn, dài
+      - tôi cao 1m70 nặng 60kg
+      - cao, nặng
+
+  - intent: hoi_diachi
+    examples: |
+      - địa chỉ shop ở đâu
+      - shop ở đâu nhỉ
+      - nhà mình ở khu nào
+      - địa chỉ
+
+  - intent: hoi_giaohang
+    examples: |
+      - ship
+      - giao hàng
+      - COD
+
+  - intent: hoi_payment
+    examples: |
+      - thanh toán
+      - thẻ
+      - tiền mặt
+      - thanh toán online
+      - thanh toán khi nhận hàng
+
+  - intent: cac_loai_order
+    examples: |
+      - tôi có thể đặt hàng bằng cách nào
+      - các kênh mua hàng
+      - mua hàng bằng cách nào
+
+  - intent: khach_order
+    examples: |
+      - cho mình đặt mua sản phẩm X nhé
+      - ship cho tôi sản phẩm X
+
+  - intent: detail_order
+    examples: |
+      - Sản phẩm X, số lượng: m, màu sắc: c, size: s. Địa chỉ giao hàng: a, SDT người nhận: 123, tên người nhận: name
+
+  - intent: thongtin_khach
+    examples: |
+      - Hà Minh, sdt: 123
+      - Số điện thoại: 234, mình là Hải
+      - 456
+
+  - intent: camon
+    examples: |
+      - cảm ơn shop nhé
+      - tạm biệt
+      - cảm ơn
+      - thank you
+      - OK
+      - oke cảm ơn shop
+      - oke
