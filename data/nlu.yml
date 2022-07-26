@@ -3,6 +3,10 @@ version: "2.0"
 nlu:
   - intent: chao_tuvan
     examples: |
+      - hi
+      - hello
+      - tư vấn
+      - hỗ trợ
       - chào shop, mình muốn mua quần áo, shop tư vấn giúp mình được không
       - mình muốn tìm hiểu vài mẫu quần áo, áo phông cho mùa hè năm nay
       - chào
@@ -56,6 +60,10 @@ nlu:
       - ship
       - giao hàng
       - COD
+      - shop nhận giao hàng không 
+      - giá ship bao nhiêu 
+      - có bán online không 
+      - làm thế nào để mua
 
   - intent: hoi_payment
     examples: |
@@ -64,17 +72,22 @@ nlu:
       - tiền mặt
       - thanh toán online
       - thanh toán khi nhận hàng
+      - tôi thanh toán thế nào 
+      - shop nhận tiền như nào 
+      - tôi thanh toán tiền mặt hay chuyển khoản 
 
   - intent: cac_loai_order
     examples: |
       - tôi có thể đặt hàng bằng cách nào
       - các kênh mua hàng
       - mua hàng bằng cách nào
+      - ngoài website ra có thể mua như thế nào 
 
   - intent: khach_order
     examples: |
       - cho mình đặt mua sản phẩm X nhé
       - ship cho tôi sản phẩm X
+      - mình 1 sản phẩm 
 
   - intent: detail_order
     examples: |
