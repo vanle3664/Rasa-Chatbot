@@ -15,6 +15,13 @@ intents:
   - detail_order
   - camon
 
+actions:
+  - action_color
+
+entities:
+  - color
+  - product_id
+
 responses:
   utter_chao_tuvan:
     - text: "Xin chào anh/chị. Cảm ơn anh chị đã quan tâm, anh chị muốn biết thông tin gì ạ?"

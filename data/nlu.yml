@@ -35,10 +35,15 @@ nlu:
 
   - intent: hoi_mausac
     examples: |
-      - màu
+      - shop có màu [vàng](color) không
       - màu sắc
-      - có những màu nào
-      - còn màu đỏ/đen/trắng/xanh/vàng không
+      - có những màu nào 
+      - còn màu [vàng](color) không 
+      - áo [mk1](product_id) có màu [xanh](color) không 
+      - áo [mk2](product_id) có màu [đỏ] (color) không 
+      - áo [mk1](product_id) có màu [tím] (color) không 
+      - áo [mk2](product_id) còn màu [tím] (color) không shop
+      - áo [mk1](product_id) màu [đỏ] (color) còn không ạ
 
   - intent: hoi_size
     examples: |
@@ -74,20 +79,20 @@ nlu:
       - thanh toán khi nhận hàng
       - tôi thanh toán thế nào 
       - shop nhận tiền như nào 
-      - tôi thanh toán tiền mặt hay chuyển khoản 
+      - tôi thanh toán tiền mặt hay chuyển khoản
 
   - intent: cac_loai_order
     examples: |
       - tôi có thể đặt hàng bằng cách nào
       - các kênh mua hàng
       - mua hàng bằng cách nào
-      - ngoài website ra có thể mua như thế nào 
+      - ngoài website ra có thể mua như thế nào
 
   - intent: khach_order
     examples: |
       - cho mình đặt mua sản phẩm X nhé
       - ship cho tôi sản phẩm X
-      - mình 1 sản phẩm 
+      - mình 1 sản phẩm
 
   - intent: detail_order
     examples: |
