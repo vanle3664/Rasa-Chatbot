@@ -8,7 +8,7 @@ stories:
       - intent: hoi_quanao
       - action: utter_hoi_quanao
       - intent: hoi_gia
-      - action: utter_hoi_gia
+      - action: action_price
       - intent: hoi_mausac
       - action: action_color
       - intent: hoi_size
@@ -27,7 +27,7 @@ stories:
   - story: hoi_gia
     steps:
       - intent: hoi_gia
-      - action: utter_hoi_gia
+      - action: action_price
 
   - story: hoi_mausac
     steps:

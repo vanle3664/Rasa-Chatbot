@@ -24,14 +24,11 @@ nlu:
     examples: |
       - giá thế nào
       - giá bao nhiêu
-      - món này bao nhiêu
-      - được giảm giá không
-      - được sale không
-      - sale
-      - sale bao nhiêu
-      - món nào đang sale
-      - dưới 500k
-      - dưới 200k
+      - áo [mk1](product_id) bao nhiêu
+      - giá [mk2](product_id) như thế nào nhỉ
+      - cho mình hỏi áo [mk3](product_id) giá bao nhiêu
+      - shop bán áo [mk1](product_id) bao nhiêu ạ
+      - xin giá áo [mk2](product_id)
 
   - intent: hoi_mausac
     examples: |
@@ -44,6 +41,8 @@ nlu:
       - áo [mk1](product_id) có màu [tím] (color) không 
       - áo [mk2](product_id) còn màu [tím] (color) không shop
       - áo [mk1](product_id) màu [đỏ] (color) còn không ạ
+      - áo [mk1](product_id) [đỏ] (color) còn không
+      
 
   - intent: hoi_size
     examples: |
@@ -90,19 +89,23 @@ nlu:
 
   - intent: khach_order
     examples: |
-      - cho mình đặt mua sản phẩm X nhé
-      - ship cho tôi sản phẩm X
-      - mình 1 sản phẩm
+      - cho mình đặt mua sản phẩm [mk1](product_id) nhé
+      - ship cho tôi sản phẩm [mk1](product_id)
+      - mình 1 sản phẩm [mk2](product_id)
 
   - intent: detail_order
     examples: |
-      - Sản phẩm X, số lượng: m, màu sắc: c, size: s. Địa chỉ giao hàng: a, SDT người nhận: 123, tên người nhận: name
+      - Cho mình [1](num_prod) áo [mk1](product_id) màu [xanh](color) size [s](size)
+      - Mình đặt [2](num_prod) áo [mk2](product_id) màu [vàng] (color) size [L](size)
+      - Mình mua [1](num_prod) áo [mk1](product_id) [đỏ](color) size [l](size)
+      - Cho mình [4](num_prod) áo [mk2](product_id) màu [tím](color) size [m](size)
+      - Mình đặt [2](num_prod) áo [mk3](product_id) [tím] (color) [XL](size)
 
   - intent: thongtin_khach
     examples: |
-      - Hà Minh, sdt: 123
-      - Số điện thoại: 234, mình là Hải
-      - 456
+      - [Hà Minh] (customer_name), sdt: [0345678910] (phone_num)
+      - Số điện thoại: [01234567788] (phone_num), mình là [Hải](customer_name)
+      - [0932635278] (phone_num) [liên](customer_name)
 
   - intent: camon
     examples: |

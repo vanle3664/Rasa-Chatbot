@@ -17,10 +17,14 @@ intents:
 
 actions:
   - action_color
+  - action_price
 
 entities:
   - color
   - product_id
+  - customer_name
+  - phone_num
+  - size
 
 responses:
   utter_chao_tuvan:
