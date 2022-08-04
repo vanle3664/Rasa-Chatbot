@@ -13,7 +13,8 @@ Step to run:
 2. Run it
 
 ```bash
-	rasa shell #run on terminal
+	rasa run actions 
+	rasa shell #run on seperate terminal
 ```
 
 Deploy on Messenger
