@@ -12,7 +12,7 @@ stories:
       - intent: hoi_mausac
       - action: action_color
       - intent: hoi_size
-      - action: utter_hoi_size
+      - action: action_size
 
   - story: chao_tuvan
     steps:
@@ -37,7 +37,7 @@ stories:
   - story: hoi_size
     steps:
       - intent: hoi_size
-      - action: utter_hoi_size
+      - action: action_size
 
   - story: hoi_diachi
     steps:
@@ -61,15 +61,13 @@ stories:
 
   - story: mua_hang
     steps:
-      - intent: khach_order
-      - action: utter_khach_order
       - intent: detail_order
       - action: utter_detail_order
 
   - story: mua_hang_2
     steps:
       - intent: thongtin_khach
-      - action: utter_detail_order
+      - action: action_receive_info
 
   - story: camon
     steps:

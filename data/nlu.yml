@@ -42,15 +42,17 @@ nlu:
       - áo [mk2](product_id) còn màu [tím] (color) không shop
       - áo [mk1](product_id) màu [đỏ] (color) còn không ạ
       - áo [mk1](product_id) [đỏ] (color) còn không
-      
+      - shop còn áo [mk5](product_id) màu [đỏ] (color) không
 
   - intent: hoi_size
     examples: |
       - size
       - có những size nào
       - vừa, rộng, chật, ngắn, dài
-      - tôi cao 1m70 nặng 60kg
+      - tôi cao [1.7] (height) nặng [60] (weight)
       - cao, nặng
+      - cao [1.58] (height), nặng [42] (weight)
+      - [53] (weight), [1.68] (height)
 
   - intent: hoi_diachi
     examples: |
@@ -106,6 +108,11 @@ nlu:
       - [Hà Minh] (customer_name), sdt: [0345678910] (phone_num)
       - Số điện thoại: [01234567788] (phone_num), mình là [Hải](customer_name)
       - [0932635278] (phone_num) [liên](customer_name)
+      - [0932635278] (phone_num) [Vân](customer_name)
+      - [0354633438] (phone_num) [Hà] (customer_name)
+      - [linh] (customer_name), sdt: [0345678910] (phone_num)
+      - [0354633438] (phone_num) [Linh] (customer_name)
+      - [vân] (customer_name), sdt: [0345678910] (phone_num)
 
   - intent: camon
     examples: |

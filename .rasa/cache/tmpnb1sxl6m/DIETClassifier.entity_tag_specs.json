@@ -1,0 +1,52 @@
+[
+  {
+    "tag_name": "entity",
+    "ids_to_tags": {
+      "1": "B-color",
+      "2": "I-color",
+      "3": "L-color",
+      "4": "U-color",
+      "5": "B-customer_name",
+      "6": "I-customer_name",
+      "7": "L-customer_name",
+      "8": "U-customer_name",
+      "9": "B-num_prod",
+      "10": "I-num_prod",
+      "11": "L-num_prod",
+      "12": "U-num_prod",
+      "13": "B-product_id",
+      "14": "I-product_id",
+      "15": "L-product_id",
+      "16": "U-product_id",
+      "17": "B-size",
+      "18": "I-size",
+      "19": "L-size",
+      "20": "U-size",
+      "0": "O"
+    },
+    "tags_to_ids": {
+      "B-color": 1,
+      "I-color": 2,
+      "L-color": 3,
+      "U-color": 4,
+      "B-customer_name": 5,
+      "I-customer_name": 6,
+      "L-customer_name": 7,
+      "U-customer_name": 8,
+      "B-num_prod": 9,
+      "I-num_prod": 10,
+      "L-num_prod": 11,
+      "U-num_prod": 12,
+      "B-product_id": 13,
+      "I-product_id": 14,
+      "L-product_id": 15,
+      "U-product_id": 16,
+      "B-size": 17,
+      "I-size": 18,
+      "L-size": 19,
+      "U-size": 20,
+      "O": 0
+    },
+    "num_tags": 21
+  }
+]

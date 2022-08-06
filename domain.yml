@@ -18,6 +18,8 @@ intents:
 actions:
   - action_color
   - action_price
+  - action_size
+  - action_receive_info
 
 entities:
   - color
@@ -25,6 +27,8 @@ entities:
   - customer_name
   - phone_num
   - size
+  - height
+  - weight
 
 responses:
   utter_chao_tuvan:
@@ -62,7 +66,7 @@ responses:
     - text: "Dạ! Anh/chị vui lòng cho em xin số điện thoại để bên em chốt đơn cho mình nhé!"
 
   utter_detail_order:
-    - text: "Shop đã nhận được thông tin của anh/chị. Shop sẽ liên lạc lại với anh/chị để xác nhận đơn hàng nhé"
+    - text: "Shop đã nhận được thông tin đơn hàng của anh/chị. Anh/chị cho shop xin tên và số điện thoại để liên lạc lại với anh/chị xác nhận đơn hàng nhé"
 
   utter_camon:
     - text: "Cảm ơn anh/chị đã quan tâm mua hàng tại shop"

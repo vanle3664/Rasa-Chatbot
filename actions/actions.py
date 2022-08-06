@@ -126,3 +126,73 @@ class ActionPrice(Action):
 
         dispatcher.utter_message(text=mess)
         return []
+
+
+class ActionSize(Action):
+
+    def name(self) -> Text:
+        return "action_size"
+
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        entities = tracker.latest_message["entities"]
+        print(entities)
+
+        mess = "Bên shop có đủ các size S M L cho các mẫu. Anh chị muốn tư vấn cụ thể cho shop xin cân nặng và chiều cao ạ! (Ví dụ: cao 1.65 nặng 47)"
+        if entities != None:
+            height = 0
+            weight = 0
+            for e in entities:
+                if e["entity"] == "height":
+                    height = float(e["value"])
+                    print(height)
+                else:
+                    weight = int(e["value"])
+            if weight == 0 or height == 0:
+                mess = "Chưa nhận được thông tin của anh chị, vui lòng kiểm tra và nhập lại giùm shop ạ!"
+
+            if height < 1.55 and weight < 50:
+                mess = "Size S sẽ phù hợp nhất với anh/chị ạ!"
+            elif height < 1.67 and weight < 60:
+                mess = "Size M sẽ phù hợp nhất với anh/chị ạ!"
+            else:
+                mess = "Size L sẽ phù hợp nhất với anh/chị ạ!"
+
+        dispatcher.utter_message(text=mess)
+
+        return []
+
+
+class ActionReceiveInfo(Action):
+
+    def name(self) -> Text:
+        return "action_receive_info"
+
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        entities = tracker.latest_message["entities"]
+        print(entities)
+        print ("NO")
+
+        mess = "Anh/chị nhập giùm shop tên và số điện thoại ạ!"
+
+        if entities != None:
+            name = ""
+            phone = ""
+            for e in entities:
+                if e["entity"] == "customer_name":
+                    name = e["value"]
+                    print(name)
+                else:
+                    phone = e["value"]
+            if phone == "" or name == "":
+                mess = "Shop chưa nhận được thông tin của anh chị, vui lòng kiểm tra và nhập lại giùm shop tên và số điện thoại ạ!"
+            else:
+                mess = "Cảm ơn anh/chị " + name + \
+                    " đã đặt hàng, shop sẽ gọi lại chốt đơn chậm nhất là trong ngày mai! Anh/chị để ý điện thoại giùm shop nhé!"
+
+        dispatcher.utter_message(text=mess)
+
+        return []
