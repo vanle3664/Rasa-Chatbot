@@ -14,38 +14,6 @@ from html import entities
 import pandas as pd
 
 from sqlalchemy import true
-product = [{"id": "mk1", "name": "All-Purpose Cami", "color": "xanh", "stock": 0, "price": "150 000"},
-           {"id": "mk1", "name": "All-Purpose Cami",
-               "color": "đỏ", "stock": 2, "price": "150 000"},
-           {"id": "mk1", "name": "All-Purpose Cami",
-               "color": "tím", "stock": 2, "price": "150 000"},
-           {"id": "mk1", "name": "All-Purpose Cami",
-               "color": "vàng", "stock": 2, "price": "150 000"},
-           {"id": "mk2", "name": "áo cô gái", "color": "xanh",
-               "stock": 2, "price": "150 000"},
-           {"id": "mk2", "name": "áo cô gái", "color": "đỏ",
-               "stock": 2, "price": "150 000"},
-           {"id": "mk2", "name": "áo cô gái", "color": "tím",
-               "stock": 2, "price": "150 000"},
-           {"id": "mk2", "name": "áo cô gái", "color": "vàng",
-               "stock": 2, "price": "150 000"},
-           {"id": "mk3", "name": "áo bọt biển",
-               "color": "xanh", "stock": 2, "price": "150 000"},
-           {"id": "mk3", "name": "áo bọt biển",
-               "color": "đỏ", "stock": 0, "price": "150 000"},
-           {"id": "mk3", "name": "áo bọt biển",
-               "color": "tím", "stock": 0, "price": "150 000"},
-           {"id": "mk3", "name": "áo bọt biển",
-               "color": "vàng", "stock": 0, "price": "150 000"},
-           {"id": "mk4", "name": "áo cây dừa", "color": "xanh",
-               "stock": 9, "price": "150 000"},
-           {"id": "mk4", "name": "áo cây dừa", "color": "đỏ",
-               "stock": 7, "price": "150 000"},
-           {"id": "mk4", "name": "áo cây dừa", "color": "tím",
-               "stock": 0, "price": "150 000"},
-           {"id": "mk4", "name": "áo cây dừa", "color": "vàng",
-               "stock": 0, "price": "150 000"},
-           ]
 
 product_data = pd.read_csv("./product.csv")
 
@@ -139,8 +107,7 @@ class ActionSize(Action):
         entities = tracker.latest_message["entities"]
         print(entities)
 
-        mess = "Bên shop có đủ các size S M L cho các mẫu. Anh chị muốn tư vấn cụ thể cho shop xin cân nặng và chiều cao ạ! (Ví dụ: cao 1.65 nặng 47)"
-        if entities != None:
+        if entities != []:
             height = 0
             weight = 0
             for e in entities:
@@ -151,13 +118,14 @@ class ActionSize(Action):
                     weight = int(e["value"])
             if weight == 0 or height == 0:
                 mess = "Chưa nhận được thông tin của anh chị, vui lòng kiểm tra và nhập lại giùm shop ạ!"
-
-            if height < 1.55 and weight < 50:
+            elif height < 1.55 and weight < 50:
                 mess = "Size S sẽ phù hợp nhất với anh/chị ạ!"
             elif height < 1.67 and weight < 60:
                 mess = "Size M sẽ phù hợp nhất với anh/chị ạ!"
             else:
                 mess = "Size L sẽ phù hợp nhất với anh/chị ạ!"
+        else:
+            mess = "Bên shop có đủ các size S M L cho các mẫu. Anh chị muốn tư vấn cụ thể cho shop xin cân nặng và chiều cao ạ! (Ví dụ: cao 1.65 nặng 47)"
 
         dispatcher.utter_message(text=mess)
 
@@ -174,7 +142,7 @@ class ActionReceiveInfo(Action):
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         entities = tracker.latest_message["entities"]
         print(entities)
-        print ("NO")
+        print("NO")
 
         mess = "Anh/chị nhập giùm shop tên và số điện thoại ạ!"
 

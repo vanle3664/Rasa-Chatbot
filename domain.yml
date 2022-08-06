@@ -24,6 +24,7 @@ actions:
 entities:
   - color
   - product_id
+  - num_prod
   - customer_name
   - phone_num
   - size
